@@ -16,7 +16,7 @@ Install requirements
 pip install -r requirements.txt
 ```
 
-Run nowplaying.py
+Run `nowplaying.py`
 ```bash
 python nowplaying.py
 ```
