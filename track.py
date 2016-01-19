@@ -10,5 +10,5 @@ class Track:
 
     def __str__(self):
         return '{} - {}, {}'.format(colored(self.title, attrs=['bold']), 
-                                    colored(self.artist, 'red'), 
+                                    colored(self.artist, 'blue'), 
                                     self.album)
