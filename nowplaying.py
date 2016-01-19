@@ -16,10 +16,8 @@ def get_song():
         if itunes.player_state.get() == k.playing:  # check if song playing
             track = Track(itunes.current_track.get())
             return track
-        else:
-            return colored('No song currently playing.', 'red')
-    else:
-        return colored('iTunes not open.', 'red')
+        return colored('No song currently playing.', 'red')
+    return colored('iTunes not open.', 'red')
 
 if __name__ == '__main__':
     main()
