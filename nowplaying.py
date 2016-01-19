@@ -6,10 +6,10 @@ from track import Track
 
 
 def main():
-    print(get_song())
+    print(get_track())
 
 
-def get_song():
+def get_track():
     itunes_open = bool(app('System Events').processes[its.name == 'iTunes'].count())
     if itunes_open:  # check if application open
         itunes = app('iTunes')
