@@ -28,15 +28,15 @@ Requirements: Python 3.
 
 + Commands:
 
-    + now playing: `main.py` (also can be used to open iTunes & play song if iTunes is not open)
-    + play: `main.py play`
-    + pause: `main.py pause`
-    + stop: `main.py stop`
-    + play next: `main.py next`
-    + play previous: `main.py prev`
-    + close: `main.py close`
+    + View now playing - `main.py np` (also can be used to open iTunes & play song if iTunes is not open)
+    + Play - `main.py play`
+    + Pause - `main.py pause`
+    + Stop - `main.py stop`
+    + Play next - `main.py next`
+    + Play previous  - `main.py prev`
+    + Close iTunes - `main.py close`
 
-+ _Optional_ step: create aliases in `.bashrc` to run without the `python main.py`.
++ _Optional_ step: create [aliases](http://tldp.org/LDP/abs/html/aliases.html) in your `.bashrc` to run without the `python main.py`.
 
     + `nowplaying="python /path/to/main.py"`
     + `playsong="python /path/to/main.py play"`
