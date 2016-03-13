@@ -33,8 +33,28 @@ def play(itunes):
     return now_playing(itunes)
 
 
+def pause(itunes):
+    if is_playing(itunes):
+        return itunes.pause()
+
+
 def stop(itunes):
     return itunes.stop()
+
+
+def play_next(itunes):
+    if not is_playing(itunes):
+        return play(itunes)
+    itunes.next_track()
+    return now_playing(itunes)
+
+
+def play_previous(itunes):
+    if not is_playing(itunes):
+        return play(itunes)
+    itunes.previous_track()
+    return now_playing(itunes)
+
 
 def main():
     cmd, is_open, itunes = None if len(sys.argv) == 1 else sys.argv[1], \
@@ -46,7 +66,10 @@ def main():
 
     cmds = {
         'np': now_playing,
+        'next': play_next,
+        'prev': play_previous,
         'play': play,
+        'pause': pause,
         'show': open,
         'stop': stop,
         'close': close
