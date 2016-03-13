@@ -1,5 +1,5 @@
 # NowPlaying
-Python command line tool to see what song is currently playing in iTunes **(OS X only)**.
+Python command line tool to control iTunes playback and see what song is currently playing **(OS X only)**.
 
 
 #### Usage
@@ -19,7 +19,7 @@ Requirements: Python 3.
     ```
 
 + Run `main.py` to see current song.
-    
+
     ```
     $ python main.py
     Can't Tell Me Nothing - Kanye West
@@ -27,7 +27,7 @@ Requirements: Python 3.
     ```
 
 + Commands:
-    
+
     + now playing: `main.py`
     + play: `main.py play`
     + pause: `main.py pause`
@@ -36,13 +36,12 @@ Requirements: Python 3.
     + play previous: `main.py prev`
     + close: `main.py close`
 
-+ _Optional_ step: create aliases in `.bashrc` to run without the `python main.py`
++ _Optional_ step: create aliases in `.bashrc` to run without the `python main.py`.
 
-    i.e.
     + `nowplaying="python /path/to/main.py"`
     + `playsong="python /path/to/main.py play"`
     + `next="python /path/to/main.py next"`
 
 #### Contribute
 
-Feel free to open an issue or make a pull request. All contributions are welcome.
+Feel free to open an [issue](https://github.com/kshvmdn/nowplaying/issues) or make a [pull request](https://github.com/kshvmdn/nowplaying/pulls). All contributions are welcome.
