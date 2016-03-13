@@ -5,7 +5,7 @@ from appscript import *
 from termcolor import colored
 
 
-def open(itunes):
+def open_(itunes):
     return itunes.activate()
 
 
@@ -62,7 +62,7 @@ def main():
         app('iTunes')
 
     if not is_open == 1:
-        open(itunes)
+        open_(itunes)
 
     cmds = {
         'np': now_playing,
@@ -70,7 +70,7 @@ def main():
         'prev': play_previous,
         'play': play,
         'pause': pause,
-        'show': open,
+        'show': open_,
         'stop': stop,
         'close': close
     }
