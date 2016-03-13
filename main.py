@@ -13,6 +13,21 @@ def close(itunes):
     return itunes.quit()
 
 
+def now_playing(itunes):
+    track = itunes.current_track.get()
+    return print('{} - {}\n{}'.format(colored(track.name(), attrs=['bold']),
+                                      track.artist(),
+                                      track.album()))
+
+
+def play(itunes):
+    itunes.play()
+    return now_playing(itunes)
+
+
+def stop(itunes):
+    return itunes.stop()
+
 def main():
     cmd, is_open, itunes = None if len(sys.argv) == 1 else sys.argv[1], \
         app('System Events').processes[its.name == 'iTunes'].count(), \
@@ -21,6 +36,14 @@ def main():
     if not is_open == 1:
         open(itunes)
 
+    cmds = {
+        'np': now_playing,
+        'play': play,
+        'show': open,
+        'stop': stop,
+        'close': close
+    }
+    cmd = cmds[cmd] if cmd in cmds else now_playing
     return cmd(itunes)
 
 if __name__ == '__main__':
