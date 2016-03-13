@@ -2,7 +2,7 @@
 
 import sys
 from appscript import *
-from termcolor import colored, cprint
+from termcolor import colored
 
 
 def open(itunes):
