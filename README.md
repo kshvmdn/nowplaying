@@ -28,7 +28,7 @@ Requirements: Python 3.
 
 + Commands:
 
-    + now playing: `main.py`
+    + now playing: `main.py` (also can be used to open iTunes & play song if iTunes is not open)
     + play: `main.py play`
     + pause: `main.py pause`
     + stop: `main.py stop`
