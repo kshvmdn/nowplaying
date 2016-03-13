@@ -13,7 +13,13 @@ def close(itunes):
     return itunes.quit()
 
 
+def is_playing(itunes):
+    return itunes.player_state.get() == k.playing
+
+
 def now_playing(itunes):
+    if not is_playing(itunes):
+        return play(itunes)
     track = itunes.current_track.get()
     return print('{} - {}\n{}'.format(colored(track.name(), attrs=['bold']),
                                       track.artist(),
@@ -21,6 +27,8 @@ def now_playing(itunes):
 
 
 def play(itunes):
+    if is_playing(itunes):
+        return play_next(itunes)
     itunes.play()
     return now_playing(itunes)
 
