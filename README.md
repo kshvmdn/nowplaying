@@ -18,29 +18,29 @@ Requirements: Python 3.
     pip install -r requirements.txt
     ```
 
-+ Run `main.py` to see current song.
++ Run `./nowplaying.py` to see current song.
 
     ```
-    $ python main.py
+    $ ./nowplaying.py np
     Can't Tell Me Nothing - Kanye West
     Graduation (Deluxe Edition)
     ```
 
-+ Commands:
++ Commands (replace `np` with w/e command you want to use):
 
-    + View now playing - `main.py np` (also can be used to open iTunes & play song if iTunes is not open)
-    + Play - `main.py play`
-    + Pause - `main.py pause`
-    + Stop - `main.py stop`
-    + Play next - `main.py next`
-    + Play previous  - `main.py prev`
-    + Close iTunes - `main.py close`
+    + View now playing - `np` (also can be used to open iTunes & play song if iTunes is not open)
+    + Play - `play`
+    + Pause - `pause`
+    + Stop - `stop`
+    + Play next - `next`
+    + Play previous  - `prev`
+    + Close iTunes - `close`
 
-+ _Optional_ step: create [aliases](http://tldp.org/LDP/abs/html/aliases.html) in your `.bashrc` to run without the `python main.py`.
++ _Optional_ step: create [aliases](http://tldp.org/LDP/abs/html/aliases.html) in your `.bashrc` to run without the `./nowplaying.py`.
 
-    + `nowplaying="python /path/to/main.py"`
-    + `playsong="python /path/to/main.py play"`
-    + `next="python /path/to/main.py next"`
+    + `np="/path/to/nowplaying.py np"`
+    + `play="/path/to/nowplaying.py play"`
+    + `next="/path/to/nowplaying.py next"`
 
 #### Contribute
 
