@@ -19,6 +19,7 @@ def is_playing(itunes):
 
 def now_playing(itunes):
     if not is_playing(itunes):
+        print('No song playing, starting now...')
         return play(itunes)
     track = itunes.current_track.get()
     return print('{} - {}\n{}'.format(colored(track.name(), attrs=['bold']),
@@ -57,11 +58,13 @@ def play_previous(itunes):
 
 
 def main():
-    cmd, is_open, itunes = None if len(sys.argv) == 1 else sys.argv[1], \
-        app('System Events').processes[its.name == 'iTunes'].count(), \
-        app('iTunes')
+    cmd = None
 
-    if not is_open == 1:
+    is_open = app('System Events').processes[its.name == 'iTunes'].count() == 1
+    itunes = app('iTunes')
+
+    if not is_open:
+        print('iTunes not open, opening now...')
         open_(itunes)
 
     cmds = {
