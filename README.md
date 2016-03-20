@@ -26,7 +26,7 @@ Requirements: Python 3.
     Graduation (Deluxe Edition)
     ```
 
-+ Commands (replace `np` with w/e command you want to use):
++ Commands (replace `np` with the command you want to use):
 
     + View now playing - `np` (also can be used to open iTunes & play song if iTunes is not open)
     + Play - `play`
@@ -36,7 +36,7 @@ Requirements: Python 3.
     + Play previous  - `prev`
     + Close iTunes - `close`
 
-+ _Optional_ step: create [aliases](http://tldp.org/LDP/abs/html/aliases.html) in your `.bashrc` to run without the `./nowplaying.py`.
++ _Optional_ step: create [aliases](http://tldp.org/LDP/abs/html/aliases.html) in your `.bashrc` / `.zshrc` to run without the `./nowplaying.py`. Here are some examples:
 
     + `np="/path/to/nowplaying.py np"`
     + `play="/path/to/nowplaying.py play"`
