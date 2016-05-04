@@ -22,9 +22,9 @@ def now_playing(itunes):
         print('No song playing, starting now...')
         return play(itunes)
     track = itunes.current_track.get()
-    return print('{} - {}\n{}'.format(colored(track.name(), attrs=['bold']),
-                                      track.artist(),
-                                      track.album()))
+    return print('%s - %s\n%s' % (colored(track.name(), attrs=['bold']),
+                                  track.artist(),
+                                  track.album()))
 
 
 def play(itunes):
