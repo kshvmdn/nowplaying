@@ -67,7 +67,7 @@ def main():
         print('iTunes not open, opening now...')
         open_(itunes)
 
-    cmds = {
+    cmd_map = {
         'np': now_playing,
         'next': play_next,
         'prev': play_previous,
@@ -77,7 +77,7 @@ def main():
         'stop': stop,
         'close': close
     }
-    cmd = cmds[cmd] if cmd in cmds else now_playing
+    cmd = cmd_map[cmd] if cmd in cmd_map else now_playing
     return cmd(itunes)
 
 if __name__ == '__main__':
