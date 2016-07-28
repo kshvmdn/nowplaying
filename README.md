@@ -51,6 +51,6 @@ Python CLI to control iTunes playback **(_Currently_ OS X only)**.
   * `play="itunes play"`
   * `np="itunes np"`
 
-#### Contribute
+## Contribute
 
 Feel free to open an [issue](https://github.com/kshvmdn/nowplaying/issues) or make a [pull request](https://github.com/kshvmdn/nowplaying/pulls). All contributions are welcome.
