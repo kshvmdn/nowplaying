@@ -1,0 +1,17 @@
+Usage: ./nowplaying [--help] [OPTIONS]
+
+  CLI to control iTunes playback
+
+Example:
+  $ ./nowplaying play
+
+Options:
+  -h --help     Display help and usage details
+  np            View currently playing song
+  next          Skip to the next song
+  previous      Play the previous song
+  pause         Pause the current song
+  play          Open iTunes and play a song
+  stop          Stop the currently playing song
+  open          Open iTunes
+  close         Close iTunes

@@ -1,46 +1,55 @@
-# NowPlaying
-Python command line tool to control iTunes playback and see what song is currently playing **(OS X only)**.
+# nowplaying
 
+Python CLI to control iTunes playback **(_Currently_ OS X only)**.
 
-#### Usage
+## Setup
 
-Requirements: Python 3.
+- Requirements:
+    + Python
 
-+ Clone project 
-   
-    ```
-    git clone http://github.com/kshvmdn/nowplaying && cd nowplaying
-    ```
-
-+ Install requirements
+- Installation:
+    
+  + Clone project
     
     ```
-    pip install -r requirements.txt
+    git clone https://github.com/kshvmdn/nowplaying.git && cd nowplaying
     ```
 
-+ Run `./nowplaying.py` to see current song.
+  + Install requirements
 
     ```
-    $ ./nowplaying.py np
-    Can't Tell Me Nothing - Kanye West
-    Graduation (Deluxe Edition)
+    pip install -r ./requirements.txt
     ```
 
-+ Commands (replace `np` with the command you want to use):
+## Usage
 
-    + View now playing - `np` (also can be used to open iTunes & play song if iTunes is not open)
-    + Play - `play`
-    + Pause - `pause`
-    + Stop - `stop`
-    + Play next - `next`
-    + Play previous  - `prev`
-    + Close iTunes - `close`
++ Run with `./nowplaying.py`.
 
-+ _Optional_ step: create [aliases](http://tldp.org/LDP/abs/html/aliases.html) in your `.bashrc` / `.zshrc` to run without the `./nowplaying.py`. Here are some examples:
+  ```
+  Usage: ./nowplaying [--help] [OPTIONS]
+    
+    CLI to control iTunes playback.
+  
+  Example:
+    ./nowplaying play
 
-    + `np="/path/to/nowplaying.py np"`
-    + `play="/path/to/nowplaying.py play"`
-    + `next="/path/to/nowplaying.py next"`
+  Options:
+    -h --help     Display help and usage details
+    np            View currently playing song
+    next          Skip to the next song
+    previous      Play the previous song
+    pause         Pause the current song
+    play          Open iTunes and play a song
+    stop          Stop the currently playing song
+    open          Open iTunes
+    close         Close iTunes
+  ```
+
++ _Optionally_ set an [alias](http://tldp.org/LDP/abs/html/aliases.html) to run the CLI using a keyword of your choosing.
+  
+  * `itunes="/path/to/nowplaying.py"`
+  * `play="itunes play"`
+  * `np="itunes np"`
 
 #### Contribute
 
