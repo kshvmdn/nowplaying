@@ -10,8 +10,12 @@ class iTunes():
         self.itunes = app('iTunes')
 
         if not self.is_itunes_open():
-            print('iTunes not open.')
-            return
+            to_open = raw_input('iTunes not running, open now?')
+            
+            if to_open.lower() in ['0', 'false', 'n', 'nah', 'no', 'nope'] or not bool(to_open):
+                return False
+            
+            self.open()
 
         self.function_map = {
             'close': self.close,
@@ -84,21 +88,26 @@ class iTunes():
 
 def exit(msg, err=False):
     print(msg)
-    sys.exit(0 if not err else 1)
+    sys.exit(1 if err else 0)
 
 
 def main(args):
     itunes = iTunes()
+    
+    if not itunes:
+        exit('iTunes must be running!')
 
     arg = args[1] if len(args) >= 2 else None
 
     if not arg:
-        exit('Expected argument. Run `-h` for help.')
-    elif arg == '--help' or '-h':
+        exit('Expected argument. Run `-h` for help.', True)
+        
+    if arg == '--help' or arg == '-h':
         with open('./help.txt', 'r') as f:
             exit('\n%s' % f.read())
-    elif arg not in itunes.function_map:
-        exit('Invalid command `%s`' % arg, True)
+            
+    if arg not in itunes.function_map:
+        exit('Invalid command `%s`.' % arg, True)
 
     itunes.function_map[arg]()
 
